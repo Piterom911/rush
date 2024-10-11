@@ -10,12 +10,12 @@ public class Solution {
     public static int[] array;
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = Integer.parseInt(scanner.nextLine());
+        Scanner console = new Scanner(System.in);
+        int n = Integer.parseInt(console.nextLine());
 
         array = new int[n];
         for (int i = 0; i < n; i++) {
-            array[i] = Integer.parseInt(scanner.nextLine());
+            array[i] = Integer.parseInt(console.nextLine());
         }
 
         int min = array[0];
