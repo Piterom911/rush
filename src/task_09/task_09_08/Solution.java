@@ -1,9 +1,7 @@
 package task_09.task_09_08;
 
 public class Solution {
-    private final String HEX = "0123456789abcdef";
-
-    public static void main(String[] args) {
+   public static void main(String[] args) {
         String binaryNumber = "100111010000";
         System.out.println("Двоичное число " + binaryNumber + " равно шестнадцатеричному числу " + toHex(binaryNumber));
         String hexNumber = "9d0";
@@ -28,56 +26,23 @@ public class Solution {
         for (int i = 0; i < binaryNumber.length(); i += 4) {
             String fourth = binaryNumber.substring(i, i + 4);
             switch (fourth) {
-                case "0000":
-                    hexNumber.append("0");
-                    break;
-                case "0001":
-                    hexNumber.append("1");
-                    break;
-                case "0010":
-                    hexNumber.append("2");
-                    break;
-                case "0011":
-                    hexNumber.append("3");
-                    break;
-                case "0100":
-                    hexNumber.append("4");
-                    break;
-                case "0101":
-                    hexNumber.append("5");
-                    break;
-                case "0110":
-                    hexNumber.append("6");
-                    break;
-                case "0111":
-                    hexNumber.append("7");
-                    break;
-                case "1000":
-                    hexNumber.append("8");
-                    break;
-                case "1001":
-                    hexNumber.append("9");
-                    break;
-                case "1010":
-                    hexNumber.append("a");
-                    break;
-                case "1011":
-                    hexNumber.append("b");
-                    break;
-                case "1100":
-                    hexNumber.append("c");
-                    break;
-                case "1101":
-                    hexNumber.append("d");
-                    break;
-                case "1110":
-                    hexNumber.append("e");
-                    break;
-                case "1111":
-                    hexNumber.append("f");
-                    break;
-                default:
-                    throw new IllegalArgumentException("Invalid binary group: " + fourth);
+                case "0000" -> hexNumber.append("0");
+                case "0001" -> hexNumber.append("1");
+                case "0010" -> hexNumber.append("2");
+                case "0011" -> hexNumber.append("3");
+                case "0100" -> hexNumber.append("4");
+                case "0101" -> hexNumber.append("5");
+                case "0110" -> hexNumber.append("6");
+                case "0111" -> hexNumber.append("7");
+                case "1000" -> hexNumber.append("8");
+                case "1001" -> hexNumber.append("9");
+                case "1010" -> hexNumber.append("a");
+                case "1011" -> hexNumber.append("b");
+                case "1100" -> hexNumber.append("c");
+                case "1101" -> hexNumber.append("d");
+                case "1110" -> hexNumber.append("e");
+                case "1111" -> hexNumber.append("f");
+                default -> throw new IllegalArgumentException("Invalid binary group: " + fourth);
             }
         }
 
@@ -92,56 +57,23 @@ public class Solution {
 
         for (int i = 0; i < hexNumber.length(); i++) {
             switch (hexNumber.charAt(i)) {
-                case '0':
-                    binaryNumber.append("0000");
-                    break;
-                case '1':
-                    binaryNumber.append("0001");
-                    break;
-                case '2':
-                    binaryNumber.append("0010");
-                    break;
-                case '3':
-                    binaryNumber.append("0011");
-                    break;
-                case '4':
-                    binaryNumber.append("0100");
-                    break;
-                case '5':
-                    binaryNumber.append("0101");
-                    break;
-                case '6':
-                    binaryNumber.append("0110");
-                    break;
-                case '7':
-                    binaryNumber.append("0111");
-                    break;
-                case '8':
-                    binaryNumber.append("1000");
-                    break;
-                case '9':
-                    binaryNumber.append("1001");
-                    break;
-                case 'a':
-                    binaryNumber.append("1010");
-                    break;
-                case 'b':
-                    binaryNumber.append("1011");
-                    break;
-                case 'c':
-                    binaryNumber.append("1100");
-                    break;
-                case 'd':
-                    binaryNumber.append("1101");
-                    break;
-                case 'e':
-                    binaryNumber.append("1110");
-                    break;
-                case 'f':
-                    binaryNumber.append("1111");
-                    break;
-                default:
-                    throw new IllegalArgumentException("Invalid hex group: " + hexNumber.charAt(i));
+                case '0' -> binaryNumber.append("0000");
+                case '1' -> binaryNumber.append("0001");
+                case '2' -> binaryNumber.append("0010");
+                case '3' -> binaryNumber.append("0011");
+                case '4' -> binaryNumber.append("0100");
+                case '5' -> binaryNumber.append("0101");
+                case '6' -> binaryNumber.append("0110");
+                case '7' -> binaryNumber.append("0111");
+                case '8' -> binaryNumber.append("1000");
+                case '9' -> binaryNumber.append("1001");
+                case 'a' -> binaryNumber.append("1010");
+                case 'b' -> binaryNumber.append("1011");
+                case 'c' -> binaryNumber.append("1100");
+                case 'd' -> binaryNumber.append("1101");
+                case 'e' -> binaryNumber.append("1110");
+                case 'f' -> binaryNumber.append("1111");
+                default -> throw new IllegalArgumentException("Invalid hex group: " + hexNumber.charAt(i));
             }
         }
 
