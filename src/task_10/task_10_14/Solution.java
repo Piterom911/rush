@@ -1,4 +1,4 @@
-package task_10.taks_10_14;
+package task_10.task_10_14;
 
 public class Solution {
     private static boolean hasEggs = true;
