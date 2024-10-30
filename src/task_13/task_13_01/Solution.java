@@ -1,7 +1,7 @@
 package task_13.task_13_01;
 
 import java.util.HashSet;
-import java.util.List;
+import static java.util.Arrays.asList;
 
 /* 
 Оформляем возврат
@@ -22,7 +22,7 @@ public class Solution {
     }
 
     public static HashSet<String> arrayToHashSet(String[] strings) {
-        return new HashSet<String>(List.of(strings));
+        return new HashSet<String>(asList(strings));
     }
 }
 
